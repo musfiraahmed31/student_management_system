@@ -54,22 +54,26 @@ CREATE TABLE students (
 );
 ```
 
-💻 How to Run Locally
-Install WAMP Server: Download and install WampServer on your machine.
+###💻 How to Run Locally
 
-Start WAMP: Launch the application and ensure the icon in your system tray turns green (meaning all services are running).
+* Install WAMP Server: Download and install WampServer on your machine.
 
-Clone or Extract Project: Place the project folder into the WAMP web directory. This is usually located at C:\wamp64\www\.
+* Start WAMP: Launch the application and ensure the icon in your system tray turns green (meaning all services are running).
 
-Example: C:\wamp64\www\StudentManagementSystem
+* Clone or Extract Project: Place the project folder into the WAMP web directory. This is usually located at C:\wamp64\www\.
 
-Set Up the Database:
+* Example: C:\wamp64\www\StudentManagementSystem
 
-Open your browser and go to http://localhost/phpmyadmin.
 
-Create the database and table using the instructions/SQL query provided above.
+## Set Up the Database:
 
-Launch the System: Open your web browser and navigate to:
-http://localhost/StudentManagementSystem (or whatever you named the folder).
+* Open your browser and go to http://localhost/phpmyadmin.
+
+* Create the database and table using the instructions/SQL query provided above.
+
+
+## Launch the System: Open your web browser and navigate to:
+
+* http://localhost/StudentManagementSystem (or whatever you named the folder).
 
 Developed as a lab project demonstrating frontend and backend integration using WAMP.
