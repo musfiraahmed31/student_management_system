@@ -1,0 +1,223 @@
+:root {
+    --primary: #000666;
+    --primary-container: #1a237e;
+    --secondary: #4955b3;
+    --surface: #f9f9f9;
+    --surface-container: #eeeeee;
+    --surface-container-low: #f3f3f3;
+    --surface-container-highest: #e2e2e2;
+    --surface-container-lowest: #ffffff;
+    --on-surface: #1a1c1c;
+    --on-surface-variant: #454652;
+    --outline: #767683;
+    --outline-variant: rgba(118, 118, 131, 0.2);
+    
+    --font-display: 'Manrope', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --radius: 0px;
+    --spacing: 8px;
+    
+    --shadow-diffused: 0 16px 32px rgba(26, 28, 28, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--surface);
+    color: var(--on-surface);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, .display-lg, .headline-sm {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.display-lg { font-size: 32px; }
+.headline-sm { font-size: 20px; }
+
+.label-md {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--on-surface-variant);
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: var(--surface-container-low);
+    padding: calc(var(--spacing) * 4);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+    border-right: 1px solid var(--outline-variant);
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--on-surface-variant);
+    transition: all 0.2s;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+    background-color: var(--surface-container-highest);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 80px;
+    background-color: var(--surface-container-highest);
+    padding: 0 calc(var(--spacing) * 4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-container {
+    padding: calc(var(--spacing) * 6);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Card & UI */
+.card {
+    background-color: var(--surface-container-lowest);
+    border-radius: var(--radius);
+    padding: calc(var(--spacing) * 3);
+    margin-bottom: calc(var(--spacing) * 4);
+}
+
+.btn {
+    border-radius: var(--radius);
+    padding: 12px 24px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-container);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--outline-variant);
+    color: var(--on-surface);
+}
+
+.btn-secondary:hover {
+    background-color: var(--surface-container-low);
+}
+
+.btn-danger {
+    background-color: transparent;
+    color: #ba1a1a;
+    padding: 8px 12px;
+}
+.btn-danger:hover {
+    text-decoration: underline;
+}
+
+/* Form */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--surface-container-highest);
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    margin-top: calc(var(--spacing) * 1);
+}
+
+.input-field:focus {
+    outline: none;
+    border-bottom-color: var(--primary);
+}
+
+/* Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 16px;
+    background-color: var(--surface-container-low);
+}
+
+.data-table td {
+    padding: 16px;
+    vertical-align: middle;
+}
+
+.data-table tr {
+    transition: background-color 0.1s ease;
+}
+
+.data-table tr:hover {
+    background-color: var(--surface-container-low);
+}
+
+.glass-gradient {
+    background: linear-gradient(135deg, var(--primary-container) 0%, var(--primary) 100%);
+    color: #ffffff;
+}
+
+.alert {
+    padding: 16px;
+    margin-bottom: 24px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+.alert.error {
+    background-color: #ffdad6;
+    color: #ba1a1a;
+    border-left-color: #ba1a1a;
+}
