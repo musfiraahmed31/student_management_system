@@ -52,6 +52,7 @@ CREATE TABLE students (
     department VARCHAR(100) NOT NULL,
     semester VARCHAR(50) NOT NULL
 );
+```
 
 💻 How to Run Locally
 Install WAMP Server: Download and install WampServer on your machine.
