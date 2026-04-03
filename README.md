@@ -54,7 +54,7 @@ CREATE TABLE students (
 );
 ```
 
-##💻 How to Run Locally
+## 💻  How to Run Locally 
 
 * Install WAMP Server: Download and install WampServer on your machine.
 
